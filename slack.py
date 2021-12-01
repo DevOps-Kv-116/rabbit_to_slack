@@ -16,13 +16,13 @@ def dataToMessage(data):
 def sendToSlack(data):
     url = SLACK_URL
     message = dataToMessage(data)
-    title = (f"New Incoming Message :zap:")
+    title = (f"{user} Made new changes")
     slack_data = {
-        "icon_emoji": ":satellite:",
+        "icon_emoji": ":rocket:",
         "channel" : SLACK_CHANNEL,
         "attachments": [
             {
-                "color": "#9733EE",
+                "color": "#5F2C9C",
                 "fields": [
                     {
                         "title": title,
